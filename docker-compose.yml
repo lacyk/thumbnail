@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  maven:
+    build: .
+    container_name: maven
+    volumes: 
+     - maven_volume:/root/.m2/repository
+    stdin_open: true
+    tty: true
+volumes:
+  maven_volume:
+    name: maven_volume
